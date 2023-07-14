@@ -1,0 +1,63 @@
+<html>
+
+<head>
+  <link rel="stylesheet" href="./style1.css">
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+  <title></title>
+</head>
+
+<body>
+  <div class="">
+    <p class="sign" align="center">Update Staff Information</p>
+    <form class="form1"  action = "/updatesearchstaff">
+
+<input class="un " type="number" align="center" name = "staffID" placeholder="Enter Staff ID to search">
+    <button type="submit" class="submit"> Search Staff Member</button>
+
+
+
+               <br>
+              {{#if umesg}}
+               <h3> DATA Updated! </h3>
+               {{/if}} 
+    
+               {{#if mesg2}}
+               <h3>Data not found!</h3>
+               {{/if}}
+              
+      
+    </form>             
+    </div>
+    <!-- Search form Design -->
+
+{{#if mesg1}}
+   
+<h3> Scroll Down To Update</h3>   
+ <div class="">
+    <p class="sign" align="center">Update Staff Member</p>
+
+
+    {{#data}}
+    <form class="form1" action = "/updatestaffdata">
+      <input class="un " type="number" align="center" name = "staffID"  value = "{{staffID}}" id = "staffID" placeholder="Enter Staff ID"required readonly>
+      <input class="pass" type="text" align="center" name = "name"  value = " {{name}}" id = "name" placeholder="Enter name of Staff member" required readonly>
+
+      <input class="un " type="date" align="center" name = "birthdate" value ="{{birthdate}}"  id = "birthdate" placeholder="Enter book price" required readonly>
+      <input class="pass" type="text" align="center" name = "designation" value = "{{designation}}" id = "designation" placeholder="Enter designation" required >
+
+      <input class="un " type="text" align="center"name = "gender"  value = "{{gender}}" id = "gender" placeholder="Enter gender  "required readonly>
+       <input class="un " type="number" align="center"name = "phone"  value = "{{phone}}" id = "phone" placeholder="Enter mobile number  "required>
+      <input type="submit" class ="submit" align="center"></input>
+
+  {{/data}}
+         <a href="/main" style="color:black"> BACK TO HOME</a>
+  
+    </form>         
+    </div>
+   {{/if}}
+   <a href="/main" style="color:black"> BACK TO HOME</a>               
+</body>
+
+</html>

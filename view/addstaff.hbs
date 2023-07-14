@@ -1,0 +1,39 @@
+<html>
+
+<head>
+  <link rel="stylesheet" href="./style1.css">
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+  <title> </title>
+</head>
+
+<body>
+
+  <div class="main">
+    <p class="sign" align="center">Add Staff</p>
+
+    <form class="form1"  action = "/addstaffdata">
+
+      <input class="un " type="number" name = "staffID"align="center" placeholder="Enter staff ID">
+      <input class="pass" type="text" name = "name" align="center" placeholder="Enter Staff name">
+
+      <input class="un " type="date" name = "birthdate" align="center" placeholder="Enter birthdate">
+      <input class="pass" type="text" name = "designation"align="center" placeholder="Enter designation">
+
+      <input class="un " type="text" name = "gender" align="center" placeholder="Enter gender">
+       <input class="un " type="number" name = "phone" align="center" placeholder="Enter mobile number">
+      
+      <input type="submit" class ="submit"  align="center"></input>
+
+      
+      {{#if mesg}}
+       <h3><center>DATA INSERTED</center></h3>
+       {{/if}}
+<a href="/main" style="color:black"> BACK TO HOME</a>  
+    </form>        
+    </div>
+     
+</body>
+
+</html>

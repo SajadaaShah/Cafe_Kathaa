@@ -1,0 +1,60 @@
+<html>
+
+<head>
+  <link rel="stylesheet" href="./style1.css">
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+  <title></title>
+</head>
+
+<body>
+  <div class="">
+    <p class="sign" align="center">Update Food Item</p>
+    <form class="form1"  action = "/updatesearchfood">
+
+<input class="un " type="text" align="center" name = "foodname" placeholder="Enter foodname to search">
+    <button type="submit" class="submit"> Search Food Item</button>
+
+
+
+               <br>
+              {{#if umesg}}
+               <h3> DATA Updated! </h3>
+               {{/if}} 
+    
+               {{#if mesg2}}
+               <h3>Data not found!</h3>
+               {{/if}}
+              
+      
+    </form>             
+    </div>
+    <!-- Search form Design -->
+
+{{#if mesg1}}
+   
+<h3> Scroll Down To Update</h3>   
+ <div class="">
+    <p class="sign" align="center">Update Food Item</p>
+
+
+    {{#data}}
+    <form class="form1" action = "/updatefooddata">
+      
+
+      <input class="un " type="text" align="center"name = "foodname"  value = "{{foodname}}" id = "foodname" placeholder="Enter foodname  "required readonly>
+       <input class="un " type="text" align="center"name = "category"  value = "{{category}}" id = "category" placeholder="Enter category  "required readonly>
+       <input class="un " type="number" align="center"name = "amount"  value = "{{amount}}" id = "amount" placeholder="Enter amount "required>
+      <input type="submit" class ="submit" align="center"></input>
+
+  {{/data}}
+         <a href="/main" style="color:black"> BACK TO HOME</a>
+  
+    </form>         
+    </div>
+   {{/if}}
+   <a href="/main" style="color:black"> BACK TO HOME</a>               
+</body>
+
+</html>

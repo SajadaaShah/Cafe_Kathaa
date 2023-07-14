@@ -1,0 +1,45 @@
+<html>
+<head>
+  <link rel="stylesheet" href="./style1.css">
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+  <title> </title>
+  
+  <script>
+function showOrderAccepted() {
+  alert("Order has been accepted");
+}
+</script>
+
+
+</head>
+
+<body>
+  
+
+  <div class="main">
+    <p class="sign" align="center">Place  Order</p>
+    
+    <form class="form1"  action="/addorderdata"> 
+      <input class="pass" type="text" align="center" name="username" placeholder="Enter User's name"> 
+         <input class="un " type="email" align="center" name="emailID" placeholder="Enter email ID">
+      <input class="pass" type="text" align="center" name="foodname"  placeholder="Enter food item picked">
+  
+      <input class="un " type="text" align="center" name="title" placeholder="Enter book's name">
+      
+    <input class="un " type="number" align="center" name="price" placeholder="Enter total amount">
+
+  
+
+      
+      <input type="submit" id="myButton" class ="submit"align="center" onclick="showOrderAccepted()"></input>
+      {{!-- <a href="/main" style="color:black"> BACK TO HOME</a> --}}
+     </form>          
+    </div>
+
+   
+ 
+</body>
+
+</html>
